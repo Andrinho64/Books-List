@@ -1,7 +1,12 @@
-// const { books } = require('./data/library');
+const { books } = require('./data/library');
 
 const formatedAuthorNamesBirth = () => {
-  // escreva seu código aqui
+  const formattedAuthors = books.map((book) => {
+    const { author } = book;
+    return `${author.name} - ${author.birthYear}`;
+  });
+
+  return formattedAuthors;
 };
 
 module.exports = { formatedAuthorNamesBirth };
